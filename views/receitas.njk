@@ -20,174 +20,22 @@
 
     {% block cards %}
         <section class="cards">
-        
-        <div class="card" id="/images/burger.png">
-            <div class="card_image-container">
-                <img src="/images/burger.png" alt="Imagen triplo bacon burguer">
-            </div>
+            
+            {% for item in items %}
+                <div class="card" id="{{item.image}}">
+                    <div class="card_image-container">
+                        <img src="{{item.image}}" alt="{{item.title}}">
+                    </div>
 
-            <div class="card_product">
-                <h2>Triplo bacon burguer</h2>
-            </div>
+                    <div class="card_product">
+                        <h2>{{item.title}}</h2>
+                    </div>
 
-            <div class="card_author">
-                <h3>por Jorge Relato</h3>
-            </div>
-        </div>
-
-        <div class="card" id="/images/pizza.png">
-            <div class="card_image-container">
-                <img src="/images/pizza.png" alt="Imagen da pizza">
-            </div>
-
-            <div class="card_product">
-                <h2>Pizza 4 estações</h2>
-            </div>
-
-            <div class="card_author">
-                <h3>por Fabiana Melo</h3>
-            </div>
-        </div>
-
-        <div class="card" id="/images/espaguete.png">
-            <div class="card_image-container">
-                <img src="/images/espaguete.png" alt="Imagen do espaguete">
-            </div>
-
-            <div class="card_product">
-                <h2>Espaguete ao alho</h2>
-            </div>
-
-            <div class="card_author">
-                <h3>por Júlia Kinoto</h3>
-            </div>
-        </div>
-
-        <div class="card" id="/images/lasanha.png">
-            <div class="card_image-container">
-                <img src="/images/lasanha.png" alt="Imagen da lasanha">
-            </div>
-
-            <div class="card_product">
-                <h2>Lasanha mac n' chesse</h2>
-            </div>
-
-            <div class="card_author">
-                <h3>por Juliano Vieira</h3>
-            </div>
-        </div>
-
-        <div class="card" id="/images/doce.png">
-            <div class="card_image-container">
-                <img src="/images/doce.png" alt="Imagen docinho">
-            </div>
-
-            <div class="card_product">
-                <h2>Docinhos pão do céu</h2>
-            </div>
-
-            <div class="card_author">
-                <h3>Ricardo Golvea</h3>
-            </div>
-        </div>
-
-        <div class="card" id="/images/asinhas.png">
-            <div class="card_image-container">
-                <img src="/images/asinhas.png" alt="Imagen asinhas de frango">
-            </div>
-
-            <div class="card_product">
-                <h2>Asinhas de frango ao barbecue</h2>
-            </div>
-
-            <div class="card_author">
-                <h3>por Vania Steroski</h3>
-            </div>
-        </div>
-
-        <div class="card" id="/images/burger.png">
-            <div class="card_image-container">
-                <img src="/images/burger.png" alt="Imagen triplo bacon burguer">
-            </div>
-
-            <div class="card_product">
-                <h2>Triplo bacon burguer</h2>
-            </div>
-
-            <div class="card_author">
-                <h3>por Jorge Relato</h3>
-            </div>
-        </div>
-
-        <div class="card" id="/images/pizza.png">
-            <div class="card_image-container">
-                <img src="/images/pizza.png" alt="Imagen da pizza">
-            </div>
-
-            <div class="card_product">
-                <h2>Pizza 4 estações</h2>
-            </div>
-
-            <div class="card_author">
-                <h3>por Fabiana Melo</h3>
-            </div>
-        </div>
-
-        <div class="card" id="/images/espaguete.png">
-            <div class="card_image-container">
-                <img src="/images/espaguete.png" alt="Imagen do espaguete">
-            </div>
-
-            <div class="card_product">
-                <h2>Espaguete ao alho</h2>
-            </div>
-
-            <div class="card_author">
-                <h3>por Júlia Kinoto</h3>
-            </div>
-        </div>
-
-        <div class="card" id="/images/lasanha.png">
-            <div class="card_image-container">
-                <img src="/images/lasanha.png" alt="Imagen da lasanha">
-            </div>
-
-            <div class="card_product">
-                <h2>Lasanha mac n' chesse</h2>
-            </div>
-
-            <div class="card_author">
-                <h3>por Juliano Vieira</h3>
-            </div>
-        </div>
-
-        <div class="card" id="/images/doce.png">
-            <div class="card_image-container">
-                <img src="/images/doce.png" alt="Imagen docinho">
-            </div>
-
-            <div class="card_product">
-                <h2>Docinhos pão do céu</h2>
-            </div>
-
-            <div class="card_author">
-                <h3>Ricardo Golvea</h3>
-            </div>
-        </div>
-
-        <div class="card" id="/images/asinhas.png">
-            <div class="card_image-container">
-                <img src="/images/asinhas.png" alt="Imagen asinhas de frango">
-            </div>
-
-            <div class="card_product">
-                <h2>Asinhas de frango ao barbecue</h2>
-            </div>
-
-            <div class="card_author">
-                <h3>por Vania Steroski</h3>
-            </div>
-        </div>
+                    <div class="card_author">
+                        <h3>{{item.author}}</h3>
+                    </div>
+                </div>
+            {% endfor %}
 
         </section>
     {% endblock %}
@@ -200,23 +48,24 @@
         </footer>
     {% endblock %}
 
-    <div class="modal-overlay">
-        <div class="modal">
-            <div class="modal-content">
-                <div class="modal-content-image">
-                    <img src="/images/burger.png" alt="produto">
+    {% block modal %}
+        <div class="modal-overlay">
+            <div class="modal">
+                <div class="modal-content">
+                    <div class="modal-content-image">
+                        <img src="/images/burger.png" alt="produto">
+                    </div>
+
+                        <h2>Triplo bacon burguer</h2>
+
+                        <h3>por Jorge Relato</h3>
                 </div>
 
-                    <h2>Triplo bacon burguer</h2>
-
-                    <h3>por Jorge Relato</h3>
+                <a class="close-modal">Close modal</a>
             </div>
-
-            <a class="close-modal">Close modal</a>
         </div>
-    </div>
+    {% endblock %}
 
-    <script src="/scripts.js"></script>
-    
-</body>
-</html>
+    {% block script %} 
+        <script src="/scripts.js"></script>
+    {% endblock %}
