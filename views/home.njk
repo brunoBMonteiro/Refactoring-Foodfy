@@ -1,0 +1,127 @@
+{% extends "layout.njk" %}
+
+    {% block header %} 
+        <header>
+        <div id="image-logo">
+            <img src="/images/logo.png" alt="Logo">
+        </div>
+
+        <div id="links">
+            <a href="/sobre">Sobre</a>
+            <a href="/receitas">Receitas</a>
+        </div>
+        </header>
+    {% endblock %}
+
+    {% block boxInfo %}
+        <div id="box-info">
+            <h1>As melhores receitas</h1>
+            <p>Aprenda a construir os melhores pratos<br> com receitas criadas por profissionais<br> do mundo inteiro.</p>
+
+            <img src="/images/119236-OQ05QX-268.png" alt="imagen do cozinheiro">
+        </div>
+    {% endblock %}
+
+    {% block bestProducts %} 
+        <div class="best-products">
+            <h1>Mais acessadas</h1>
+        </div> 
+    {% endblock %}
+
+    {% block cards %} 
+        <section class="cards">
+            
+            <div class="card">
+                <div class="card_image-container">
+                    <img src="/images/burger.png" alt="Imagen triplo bacon burguer">
+                </div>
+
+                <div class="card_product">
+                    <p>Triplo bacon burguer</p>
+                </div>
+
+                <div class="card_author">
+                    <p>por Jorge Relato</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card_image-container">
+                    <img src="/images/pizza.png" alt="Imagen da pizza">
+                </div>
+
+                <div class="card_product">
+                    <p>Pizza 4 estações</p>
+                </div>
+
+                <div class="card_author">
+                    <p>por Fabiana Melo</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card_image-container">
+                    <img src="/images/espaguete.png" alt="Imagen do espaguete">
+                </div>
+
+                <div class="card_product">
+                    <p>Espaguete ao alho</p>
+                </div>
+
+                <div class="card_author">
+                    <p>por Júlia Kinoto</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card_image-container">
+                    <img src="/images/lasanha.png" alt="Imagen da lasanha">
+                </div>
+
+                <div class="card_product">
+                    <p>Lasanha mac n' chesse</p>
+                </div>
+
+                <div class="card_author">
+                    <p>por Juliano Vieira</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card_image-container">
+                    <img src="/images/doce.png" alt="Imagen docinho">
+                </div>
+
+                <div class="card_product">
+                    <p>Docinhos pão do céu</p>
+                </div>
+
+                <div class="card_author">
+                    <p>Ricardo Golvea</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card_image-container">
+                    <img src="/images/asinhas.png" alt="Imagen asinhas de frango">
+                </div>
+
+                <div class="card_product">
+                    <p>Asinhas de frango ao barbecue</p>
+                </div>
+
+                <div class="card_author">
+                    <p>por Vania steroski</p>
+                </div>
+            </div>
+        </section>
+    {% endblock %}
+ 
+    {% block footer %}
+        <footer>
+        <div class="footer">
+            <p>Todos direitos reservados, receitas Foodfy.</p>
+        </div>
+        </footer>
+    {% endblock %}
+

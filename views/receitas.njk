@@ -1,30 +1,25 @@
-<!DOCTYPE html>
-<html lang="pt_br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends "layout.njk" %}
+
+{% block head %} 
     <link rel="stylesheet" href="/receitas.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-    
     <title>Receitas Foodfy</title>
-</head>
-<body>
+{% endblock %}
     
-    <header>
-        <div id="image-logo">
-            <img src="/images/logo.png" alt="Logo">
-        </div>
+    {% block header %}
+        <header>
+            <div id="image-logo">
+                <img src="/images/logo.png" alt="Logo">
+            </div>
 
-        <div id="links">
-            <a href="/sobre">Sobre</a>
-            <a href="/">Receitas</a>
-        </div>
-    </header>
+            <div id="links">
+                <a href="/sobre">Sobre</a>
+                <a href="/">Receitas</a>
+            </div>
+        </header>
+    {% endblock %}
 
-    <section class="cards">
+    {% block cards %}
+        <section class="cards">
         
         <div class="card" id="/images/burger.png">
             <div class="card_image-container">
@@ -194,13 +189,16 @@
             </div>
         </div>
 
-    </section>
+        </section>
+    {% endblock %}
 
-    <footer>
-        <div class="footer">
-            <p>Todos direitos reservados, receitas Foodfy.</p>
-        </div>
-    </footer>
+    {% block footer %}
+        <footer>
+            <div class="footer">
+                <p>Todos direitos reservados, receitas Foodfy.</p>
+            </div>
+        </footer>
+    {% endblock %}
 
     <div class="modal-overlay">
         <div class="modal">
