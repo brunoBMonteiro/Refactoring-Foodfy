@@ -3,6 +3,8 @@ const nunjucks = require('nunjucks')
 
 const server = express()
 
+server.use(express.static('public'))
+
 server.set("view engine", "html")
 
 nunjucks.configure("views", {
@@ -10,7 +12,7 @@ nunjucks.configure("views", {
 })
 
 server.get("/", function(req, res){
-    return res.send("Hi")
+    return res.render("home")
 })
 
 server.listen(5000, function(){

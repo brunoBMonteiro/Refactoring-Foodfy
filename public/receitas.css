@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+header {
+    height: 70px;
+    width: 100%;
+}
+
+#image-logo {
+    position: relative;
+    top: 36.1px;
+    left: 288px;
+    width: 90.6px;
+    height: 36.1px;
+    color:  #111111;
+}
+
+#links {
+    display: flex; 
+    position: absolute;
+    top: 38px;
+    left: 490px;
+    gap: 30px;
+
+}
+
+#links a {
+    width: 42px;
+    height: 19px;
+    font-size: 16px;
+    color: #111111;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+#links a:hover {
+    color: chartreuse;
+    transition: 200ms;
+}
+
+
+.cards {
+    max-width: 940px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 98px;
+}
+
+.cards h1 {
+    width: 174px;
+    height: 28px;
+    color: #111111;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card {
+    width: 300px;
+    height: 200px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.card_image-container img {
+    width: 100%;
+    height: 140px;
+    border-radius: 15px;
+}
+
+.card_product h2 {
+    width: 100%;
+    height: 21px;
+    color: #111111;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card_author h3 {
+    width: 100%;
+    height: 20px;
+    color: #777777;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 5px;
+}
+
+.footer {
+    width: auto;
+    height: 62px;
+    background-color: #EEEEEE;
+}
+
+.footer p {
+    text-align: center;
+    padding: 23px 566px 23px 567px;
+    width: 267px;
+    height: 16px;
+    color: #999999;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: white;
+    width: 660px;
+    height: 413px;
+    margin: 20vh auto;
+    border-radius: 16px;
+
+}
+
+.modal-content {
+    width: 100%;
+    height: 70%;
+}
+
+.modal-content-image {
+    width: 600px;
+    height: 200px;
+}
+
+.modal-content-image img {
+    width: 600px;
+    height: 200px;
+    border-radius: 15px;
+    margin: 30px 30px 183px 30px;
+}
+
+.modal-content h2 {
+    width: 332px;
+    height: 28px;
+    width: 332px;
+    height: 28px;
+    font-size: 24px;
+    color: #111111;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    top: 40px;
+    left: 220px;
+}
+
+
+.modal-content h3 {
+    width: auto;
+    height: auto;
+    width: 146px;
+    height: 21px;
+    color: #777777;
+    font-size: 18px;
+    position: relative;
+    top: 60px;
+    left: 270px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.close-modal {
+    position: relative;
+    top: 60px;
+    left: 281px;
+    right: 281px;
+    bottom: 30px;
+    width: 98px;
+    height: 19px;
+    color: #999999;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+
+/* === Modal.Active === */
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
