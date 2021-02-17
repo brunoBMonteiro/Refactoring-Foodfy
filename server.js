@@ -16,12 +16,16 @@ server.get("/", function(req, res){
     return res.render("home")
 })
 
-server.get("/receitas", function(req, res){
-    return res.render("receitas", {items: cardRecipes})
+server.get("/recipes", function(req, res){
+    return res.render("recipes", {items: cardRecipes})
 })
 
-server.get("/sobre", function(req, res){
-    return res.render("sobre")
+server.get("/about", function(req, res){
+    return res.render("about")
+})
+
+server.get("/recipe", function(req, res){
+    return res.render("recipe")
 })
 
 server.listen(5000, function(){
