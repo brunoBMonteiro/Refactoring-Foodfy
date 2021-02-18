@@ -28,6 +28,13 @@ server.get("/recipe", function(req, res){
     return res.render("recipe")
 })
 
+server.get("/recipes/:index", function (req, res) {
+    const recipes = [...data.js]; // Array de receitas carregadas do data.js
+    const recipeIndex = req.params.index;
+  
+    return (recipes[recipeIndex]);
+  })
+
 server.listen(5000, function(){
     console.log("server is running")
 })
