@@ -1,5 +1,7 @@
 const express = require('express')
 const nunjucks = require('nunjucks')
+const data = require('./data')
+const { map } = require('./data')
 
 const server = express()
 const cardRecipes = require("./data")
@@ -16,23 +18,19 @@ server.get("/", function(req, res){
     return res.render("home")
 })
 
-server.get("/recipes", function(req, res){
-    return res.render("recipes", {items: cardRecipes})
-})
-
 server.get("/about", function(req, res){
     return res.render("about")
 })
 
-server.get("/recipe", function(req, res){
-    return res.render("recipe")
+server.get("/recipes", function(req, res){
+    return res.render("recipes", {items: cardRecipes})
 })
 
 server.get("/recipes/:index", function (req, res) {
-    const recipes = [...data.js]; // Array de receitas carregadas do data.js
+    const recipes = data; // Array de receitas carregadas do data.js
     const recipeIndex = req.params.index;
   
-    console.log(recipes[recipeIndex]);
+    return res.render("/recipe", {item: recipes[recipeIndex]})
   })
 
 server.listen(5000, function(){
