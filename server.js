@@ -30,7 +30,7 @@ server.get("/recipes/:index", function (req, res) {
     const recipes = data; // Array de receitas carregadas do data.js
     const recipeIndex = req.params.index;
   
-    return res.render("/recipe", {item: recipes[recipeIndex]})
+    return res.render("recipe", {item: recipes[recipeIndex]})
   })
 
 server.listen(5000, function(){

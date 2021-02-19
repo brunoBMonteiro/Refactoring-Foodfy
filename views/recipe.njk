@@ -19,7 +19,7 @@
 {% endblock %}
 
 {% block imageContainer %}
-    {% for item in items %}
+    
         <div class="image-container">
             <img src="{{item.image}}" alt="{{item.title}}">
         </div>
@@ -28,11 +28,11 @@
             <h1>{{item.title}}</h1>
             <h4>{{item.author}}</h4>
         </div>
-    {% endfor %}
+   
 {% endblock %}
 
 {% block main %}
-    {% for item in items %}
+    
         <main>
             <div class="ingredients">
                     <h3>Ingredientes</h3>
@@ -41,8 +41,9 @@
 
             <div class="ingredients-content">
                     <ul>
-                        <li>{{item.ingredients}}</li>
-                        
+                        {% for ingredients in item.ingredients %}
+                            <li>{{ingredients}}</li>
+                        {% endfor %}
                     </ul>
                 </div>
 
@@ -53,8 +54,9 @@
 
             <div class="preparation-content">
                 <ul> 
-                    <li>{{item.preparation}}</li>
-                    
+                    {% for preparation in item.preparation %}
+                        <li>{{preparation}}</li>
+                    {% endfor %}
                 </ul>
             </div>
 
@@ -68,7 +70,7 @@
             </div>
 
         </main>
-    {% endfor %}
+    
 {% endblock %}
 
 {% block footer %}
