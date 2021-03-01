@@ -82,6 +82,11 @@ Dentro da página do detalhe da receita, em cada seção "Ingredientes", "Modo d
 
 Esse desafio **não precisa ser entregue** e não receberá correção. Após concluí-lo, adicionar esse código ao seu Github é uma boa forma de demonstrar seus conhecimentos para oportunidades futuras.
 
+### Iniciar a aplicação
+
+-Após clonar a aplicação e acessar o arquivo, abra com "code ." e digite "npm start" to terminal do VS code.
+
+
 ## :memo: Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](../LICENSE) para mais detalhes.
