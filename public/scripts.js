@@ -1,19 +1,24 @@
-const modalOverlay = document.querySelector(".modal-overlay")
 const cards = document.querySelectorAll(".card")
 
 for (let card of cards) {
-    card.addEventListener("click", function(){
-        const id = card.getAttribute("id")
-        const product = card.querySelector("h2").innerHTML
-        const author = card.querySelector("h3").innerHTML
-
-        modalOverlay.classList.add("active")
-        modalOverlay.querySelector("img").src = id;
-        modalOverlay.querySelector("h2").innerHTML = product
-        modalOverlay.querySelector("h3").innerHTML = author
+    card.addEventListener("click", function () {
+        const recipeId = card.getAttribute("id")
+        window.location.href = `/recipes/${recipeId}`
     })
 }
 
-document.querySelector(".close-modal").addEventListener("click", function() {
-    modalOverlay.classList.remove("active")
-})
+const recipeWrapers = document.querySelectorAll('.recipe-wraper')
+
+for (let wraper of recipeWrapers) {
+    const button = wrapper.querySelector('.button')
+
+    button.addEventListener('click', function () {
+        wraper.classList.add('button')
+        wraper.querySelector('').classList.toggle('button')
+        if (button.innerHTML == 'ESCONDER') {
+            button.innerHTML = 'MOSTRAR'
+        } else {
+            button.innerHTML = 'ESCONDER'
+        }
+    })
+}
