@@ -1,54 +1,53 @@
 {% extends "layout.njk" %}
 
-{% block head %} 
+{% block head %}
     <link rel="stylesheet" href="/recipes.css">
     <title>Receitas Foodfy</title>
 {% endblock %}
-    
-    {% block header %}
-        <header>
-            <div id="image-logo">
-                <img src="/images/logo.png" alt="Logo">
-            </div>
 
-            <div id="links">
-                <a href="/about">Sobre</a>
-                <a href="/">Receitas</a>
-            </div>
-        </header>
-    {% endblock %}
+{% block header %}
+    <header>
+        <div id="image-logo">
+            <img src="/images/logo.png" alt="Logo">
+        </div>
 
-    {% block cards %}
-        <section class="cards">
-            
-            {% for item in items %}
-                <div class="card" id="{{item.title}}">
-                    <div class="card_image-container">
-                        <img src="{{item.image}}" alt="{{item.title}}">
-                    </div>
+        <div id="links">
+            <a href="/about">Sobre</a>
+            <a href="/">Receitas</a>
+        </div>
+    </header>
+{% endblock %}
 
-                    <div class="card_product">
-                        <h2>{{item.title}}</h2>
-                    </div>
+{% block cards %}
+    <section class="cards">
 
-                    <div class="card_author">
-                        <h3>{{item.author}}</h3>
-                    </div>
+        {% for item in items %}
+            <div class="card" id="{{loop.index0}}">
+                <div class="card_image-container">
+                    <img src="{{item.image}}" alt="{{item.title}}">
                 </div>
-            {% endfor %}
 
-        </section>
-    {% endblock %}
+                <div class="card_product">
+                    <h2>{{item.title}}</h2>
+                </div>
 
-    {% block footer %}
-        <footer>
-            <div class="footer">
-                <p>Todos direitos reservados, receitas Foodfy.</p>
+                <div class="card_author">
+                    <h3>{{item.author}}</h3>
+                </div>
             </div>
-        </footer>
-    {% endblock %}
+        {% endfor %}
 
-    
-    {% block script %} 
-        <script src="/scripts.js"></script>
-    {% endblock %}
+    </section>
+{% endblock %}
+
+{% block footer %}
+    <footer>
+        <div class="footer">
+            <p>Todos direitos reservados, receitas Foodfy.</p>
+        </div>
+    </footer>
+{% endblock %}
+
+{% block script %}
+    <script src="/scripts.js"></script>
+{% endblock %}
