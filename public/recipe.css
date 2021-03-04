@@ -113,6 +113,10 @@ header {
     margin-top: 20px;
 }
 
+.ingredients.hide {
+    display: none;
+} 
+
 .ingredients-content ul {
     color: #444444;
     font-size: 18px;
@@ -225,4 +229,8 @@ header {
     color: #999999;
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
+}
+
+.active {
+    display: none;
 }

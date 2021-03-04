@@ -37,10 +37,10 @@
         <div class="recipe-wraper">
             <div class="ingredients">
                 <h3>Ingredientes</h3>
-                <button>ESCONDER</button>
+                <button class="button">MOSTRAR</button>
             </div>
 
-            <div class="ingredients-content">
+            <div class="ingredients-content active">
                 <ul>
                     {% for ingredients in item.ingredients %}
                         <li>{{ingredients}}</li>
@@ -50,10 +50,10 @@
 
             <div class="preparation">
                 <h3>Modo de preparo</h3>
-                <button>ESCONDER</button>
+                <button class="button">MOSTRAR</button>
             </div>
 
-            <div class="preparation-content">
+            <div class="preparation-content active">
                 <ul>
                     {% for preparation in item.preparation %}
                         <li>{{preparation}}</li>
@@ -63,10 +63,10 @@
 
             <div class="information">
                 <h3>Informações adicionais</h3>
-                <button>ESCONDER</button>
+                <button class="button">MOSTRAR</button>
             </div>
 
-            <div class="information-content">
+            <div class="information-content active">
                 <p>{{item.information}}</p>
             </div>
         </div>

@@ -1,4 +1,8 @@
-const cards = document.querySelectorAll(".card")
+const cards = document.querySelectorAll(".card");
+const buttons = document.querySelectorAll(".button");
+const ingredients = document.querySelector(".ingredients-content");
+const preparation = document.querySelector(".preparation-content");
+const information = document.querySelector(".information-content");
 
 for (let card of cards) {
     card.addEventListener("click", function () {
@@ -7,18 +11,12 @@ for (let card of cards) {
     })
 }
 
-const recipeWrapers = document.querySelectorAll('.recipe-wraper')
-
-for (let wraper of recipeWrapers) {
-    const button = wrapper.querySelector('.button')
-
+for (let button of buttons) {
     button.addEventListener('click', function () {
-        wraper.classList.add('button')
-        wraper.querySelector('').classList.toggle('button')
-        if (button.innerHTML == 'ESCONDER') {
-            button.innerHTML = 'MOSTRAR'
-        } else {
-            button.innerHTML = 'ESCONDER'
+        if (button === 'MOSTRAR') {
+            ingredients.classList.add('active')
+
         }
+
     })
 }
